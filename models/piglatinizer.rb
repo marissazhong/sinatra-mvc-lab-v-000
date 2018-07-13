@@ -5,7 +5,7 @@ class PigLatinizer
   end
 
   def piglatinize(text)
-    if "aeiou".include?(text[0])
+    if "aeiouAEIOU".include?(text[0])
       result = "#{text[1..-1]+text[0]}way"
     else
       i=0
