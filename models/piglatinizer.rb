@@ -12,7 +12,7 @@ class PigLatinizer
       while !"aeiou".include?(text[i])
         i+=1
       end
-      result = "#{text[i..-1]+text[0..i-1]}ay"
+      result = "#{text[i..-1]+text[0..i-1]}way"
     end
     result
   end
