@@ -5,15 +5,20 @@ class PigLatinizer
   end
 
   def piglatinize(text)
-    if "aeiouAEIOU".include?(text[0])
-      result = "#{text}way"
-    else
-      i=0
-      while !"aeiouAEIOU".include?(text[i])
-        i+=1
+    text_split = text.split(' ')
+    result = ""
+    text_split.each {|word|
+      if "aeiouAEIOU".include?(word[0])
+        result = "#{word}way"
+      else
+        i=0
+        while !"aeiouAEIOU".include?(word[i])
+          i+=1
+        end
+        result = "#{word[i..-1]+word[0..i-1]}ay"
       end
-      result = "#{text[i..-1]+text[0..i-1]}ay"
-    end
+    }
+
     result
   end
 end
