@@ -9,7 +9,7 @@ class PigLatinizer
     result = ""
     text_split.each {|word|
       if "aeiouAEIOU".include?(word[0])
-        result = "#{word}way"
+        result += "#{word}way "
       else
         i=0
         while !"aeiouAEIOU".include?(word[i])
@@ -19,6 +19,6 @@ class PigLatinizer
       end
     }
 
-    result
+    result.strip
   end
 end
