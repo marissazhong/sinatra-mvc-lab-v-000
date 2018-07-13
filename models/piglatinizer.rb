@@ -6,6 +6,11 @@ class PigLatinizer
 
   def latinize
     if "aeiou".include?(@text[0])
-      result = "#{text.slice(1..-1)}"
+      result = "#{text[1..-1]+text[0]}ay"
+    else
+      i=0
+      while !"aeiou".include?(@text[i])
+        i+=1
+      end
 
 end
