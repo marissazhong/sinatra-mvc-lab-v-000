@@ -14,5 +14,6 @@ class PigLatinizer
       end
       result = "#{text[i..-1]+text[0..i-1]}ay"
     end
-
+    result
+  end
 end
