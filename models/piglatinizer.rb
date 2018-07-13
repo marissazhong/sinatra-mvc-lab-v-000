@@ -18,7 +18,6 @@ class PigLatinizer
         result += "#{word[i..-1]+word[0..i-1]}ay "
       end
     }
-
     result.strip
   end
 end
